@@ -1,0 +1,91 @@
+* {
+	font-size: 11px;
+	font-family: Verdana;
+}
+
+img {
+	border: 0px;
+}
+
+h1 a {
+	font-size: 16px;
+	color: black;
+}
+
+table.info {
+	border-spacing: 1px;
+	background-color: #c5dbec;
+	width: 100%;
+}
+
+table.info tbody {
+	background-color: #dfeffc;
+}
+
+table.info thead {
+	color: white;
+	background-color: #5c9ccc;
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+table.info td {
+	height: 25px;
+}
+
+table.info td.x {
+	background: #ADD0EA;
+}
+
+table.info td.static {
+	color: #606060;
+}
+
+table.info td.static:hover {
+	background: #d0e5f5;
+	color: #609050;
+}
+
+table.info tbody tr.neg {
+	color: #909090;
+}
+
+table.info tbody tr.missed {
+	background: rgb(255, 190, 166);
+}
+
+table.info tbody tr.error {
+	color: yellow;
+	background: rgb(255, 120, 120);
+}
+
+table.info tbody tr:hover {
+	background: #d0e5f5;
+}
+
+div.warning {
+	text-align: center;
+	background: yellow;
+	border: 1px solid red;
+	padding: 5px;
+}
+
+div.question {
+	text-align: center;
+	font-size: 16pt;
+	padding: 5px;
+}
+
+h1 {
+	font-family: Verdana;
+	font-size: 16px;
+}
+
+a {
+	color: darkblue;
+}
+
+a:hover {
+	color: blue;
+}

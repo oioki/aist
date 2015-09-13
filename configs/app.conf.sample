@@ -1,0 +1,21 @@
+[global]
+sitename = "aist (asterisk stats)"
+pbx_module = "asterisk.php"
+auth_required = 0
+style = "blue.css"
+
+[database]
+host = "localhost"
+name = "asterisk"
+user = "user"
+pass = "pass"
+
+[schema]
+cdr = "cdr"
+extensions = "sip_users"
+users = "users"
+
+[local]
+tzoffset = 3
+accountcode =
+ext_length = 3

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+
+<title>Audio Player</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="st/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="st/jplayer.metro-fire.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="st/jquery.min.js"></script>
+<script type="text/javascript" src="st/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	playpath = location.pathname;
+	downloadpath = playpath.replace("play","download");
+
+	var request;
+	request = $.ajax({
+		type: "HEAD",
+		url: downloadpath,
+		success: function () {
+			bytes = request.getResponseHeader("Content-Length");
+			mbytes = (bytes/1024/1024).toFixed(2);
+			filename = downloadpath.split(/[/ ]+/).pop();
+
+			$('#download')[0].href = downloadpath;
+			html = '<a href="' + downloadpath + '" download>Download ' + filename + ' (' + mbytes + ' MB)';
+			$('#download').html(html);
+		},
+		error: function (res) {
+			$('#download').html('Ошибка загрузки файла: ' + res.status + ' ' + res.statusText);
+		}
+	});
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+				wav: downloadpath
+			}).jPlayer("play");
+		},
+		swfPath: "st",
+		supplied: "wav",
+		wmode: "window",
+		smoothPlayBar: true,
+		keyEnabled: true,
+		remainingDuration: true,
+		toggleDuration: true,
+		volume: 1,
+//		warningAlerts: true,
+//		errorAlerts: true
+	});
+});
+//]]>
+</script>
+</head>
+<body>
+	<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+	<div id="jp_container_1" class="jp-audio">
+		<div class="jp-controls">
+			<a class="jp-play"><i class="fa fa-play"></i></a>
+			<a class="jp-pause"><i class="fa fa-pause"></i></a>
+		</div>
+		<div class="jp-progress">
+			<div class="jp-seek-bar">
+				<div class="jp-play-bar">
+				</div>
+			</div>
+			<div class="jp-current-time"></div>
+		</div>
+		<div class="jp-no-solution">
+			Media Player Error<br>
+			Update your browser or Flash plugin
+		</div>
+	</div>
+<br/>
+<center><span id='download' download></span></center>
+</body>
+
+</html>
