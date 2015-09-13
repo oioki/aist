@@ -41,3 +41,4 @@ wget -O fonts/fontawesome-webfont.eot https://raw.githubusercontent.com/FortAwes
 wget -O fonts/fontawesome-webfont.svg https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.svg
 wget -O fonts/fontawesome-webfont.ttf https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.ttf
 wget -O fonts/fontawesome-webfont.woff https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.woff
+wget -O fonts/fontawesome-webfont.woff2 https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.woff2
