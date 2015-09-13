@@ -1,5 +1,6 @@
 # aist
 Statistics for Asterisk
+<img src="https://cloud.githubusercontent.com/assets/1127549/9838393/083f8454-5a5d-11e5-92e9-8b4e68a11b60.png"/>
 
 Installation
 ------------
