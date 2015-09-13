@@ -12,7 +12,7 @@
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
-	playpath = location.pathname;
+	playpath = location.search.split('?')[1];
 	downloadpath = playpath.replace("play","download");
 
 	var request;
