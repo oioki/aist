@@ -35,9 +35,9 @@ wget -O st/jplayer.metro-fire.css https://raw.githubusercontent.com/miktemk/jPla
 
 # FontAwesome for player
 wget -O st/font-awesome.min.css https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/css/font-awesome.min.css
-mkdir st/fonts
-wget -O st/fonts/FontAwesome.otf https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/FontAwesome.otf
-wget -O st/fonts/fontawesome-webfont.eot https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.eot
-wget -O st/fonts/fontawesome-webfont.svg https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.svg
-wget -O st/fonts/fontawesome-webfont.ttf https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.ttf
-wget -O st/fonts/fontawesome-webfont.woff https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.woff
+mkdir fonts
+wget -O fonts/FontAwesome.otf https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/FontAwesome.otf
+wget -O fonts/fontawesome-webfont.eot https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.eot
+wget -O fonts/fontawesome-webfont.svg https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.svg
+wget -O fonts/fontawesome-webfont.ttf https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.ttf
+wget -O fonts/fontawesome-webfont.woff https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/fonts/fontawesome-webfont.woff
