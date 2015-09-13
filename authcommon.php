@@ -52,7 +52,7 @@ function check_credentials($login,$plainpassword)
 
 function create_user($email)
 {
-    global $dbh;
+    global $dbh, $tableUsers;
 
     $login  = preg_replace('/@.*/', '', $email);
     $passwd = substr(str_shuffle('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789') , 0 , 10 );
