@@ -12,8 +12,9 @@
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
-	playpath = location.search.split('?')[1];
-	downloadpath = playpath.replace("play","download");
+	playpath = location.search.split('&')[0].substr(1);
+	downloadpath = 'download/'+playpath;
+	downloadlabel = location.search.split('&')[1];
 
 	var request;
 	request = $.ajax({
@@ -22,10 +23,9 @@ $(document).ready(function(){
 		success: function () {
 			bytes = request.getResponseHeader("Content-Length");
 			mbytes = (bytes/1024/1024).toFixed(2);
-			filename = downloadpath.split(/[/ ]+/).pop();
 
 			$('#download')[0].href = downloadpath;
-			html = '<a href="' + downloadpath + '" download>Download ' + filename + ' (' + mbytes + ' MB)';
+			html = '<a href="' + downloadpath + '" download="'+downloadlabel+'">Download ' + downloadlabel + ' (' + mbytes + ' MB)';
 			$('#download').html(html);
 		},
 		error: function (res) {

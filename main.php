@@ -90,8 +90,10 @@ while ( $row = $sth->fetch() )
 {
     // download feature
     $ts = $row['dateTimeOrigination'] - $tzoffset*3600;
-    $row['playlink'] = "play.html?".date('Y/m/d/',$ts).$ts."-".$row['callingPartyNumber']."-".$row['finalCalledPartyNumber'].".mp3";
-    $row['downloadlink'] = "download/".date('Y/m/d/',$ts).$ts."-".$row['callingPartyNumber']."-".$row['finalCalledPartyNumber'].".mp3";
+    $row['downloadlabel'] = date('Y-m-d',$ts)."-".$row['callingPartyNumber']."-".$row['finalCalledPartyNumber'].".mp3";
+    $filename = date('Y/m/d/',$ts).$row['uniqueid'].".mp3";
+    $row['playlink'] = "play.html?".$filename."&".$row['downloadlabel'];
+    $row['downloadlink'] = "download/".$filename;
 
     $row['ringtime'] = ($row['dateTimeConnect']==0) ? $row['dateTimeDisconnect'] - $row['dateTimeOrigination'] : $row['dateTimeConnect']-$row['dateTimeOrigination'];
     $row['dateTimeOrigination'] = dat($row['dateTimeOrigination'], $oneday);

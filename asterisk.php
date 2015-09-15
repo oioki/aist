@@ -102,6 +102,7 @@ dst AS finalCalledPartyNumber,
 UNIX_TIMESTAMP(calldate + INTERVAL $tzoffset HOUR) + duration - billsec AS `dateTimeConnect`,
 UNIX_TIMESTAMP(calldate + INTERVAL $tzoffset HOUR) + duration AS `dateTimeDisconnect`,
 billsec AS `duration`,
+uniqueid,
 disposition AS `origCause_value`,
 disposition AS `destCause_value`
 FROM `$table` $join
