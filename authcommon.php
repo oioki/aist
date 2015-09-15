@@ -58,9 +58,9 @@ function create_user($email)
     $passwd = substr(str_shuffle('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789') , 0 , 10 );
 
     $proto = "http" . (isset($_SERVER['HTTPS']) ? 's' : '');
-    $host = $_SERVER['HTTP_HOST'];
+    $host = isset($_SERVER['HTTP_X_FORWARDED_HOST']) ? $_SERVER['HTTP_X_FORWARDED_HOST'] : $_SERVER("HTTP_HOST");
     $path = $_SERVER['REQUEST_URI'];
-    $path = substr($url, 0, strrpos($path, '/'));
+    $path = substr($path, 0, strrpos($path, '/'));
     $url = "$proto://$host$path";
 
     $subj = "Доступ к телефонной статистике";
