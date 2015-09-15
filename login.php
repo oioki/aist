@@ -8,7 +8,7 @@ function do_login()
 	global $dbh;
 	$login = $_POST['login'];
 	$pass = $_POST['pass'];
-	$ip = $_SERVER['REMOTE_ADDR'];
+	$ip = (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
 
 	$sql = "INSERT INTO `logins` VALUES(?,NOW(),?,?)";
 	$sth = $dbh->prepare($sql);

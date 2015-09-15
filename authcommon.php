@@ -72,8 +72,8 @@ $url
 
 Логин:  $login
 Пароль: $passwd";
-    $headers = 'From: www@cc-stat.fxclub.org'. "\r\n" .
-               'Content-type: text/plain; charset=utf-8';
+    $headers = "From: admin@$host\r\n" .
+               "Content-type: text/plain; charset=utf-8";
     mail($email, $subj, $msg, $headers);
 
     $sql = "INSERT INTO `$tableUsers`(`login`,`pass`,`role`) VALUES(?, ?, ?)";
