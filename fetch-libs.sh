@@ -32,6 +32,7 @@ wget -O st/Jplayer.swf http://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.0/Jplay
 
 # jPlayer-metro-skin
 wget -O st/jplayer.metro-fire.css https://raw.githubusercontent.com/miktemk/jPlayer-metro-skin/master/skin/metro-fire/jplayer.metro-fire.css
+wget -O st/jplayer.metro-fire.css.map https://raw.githubusercontent.com/miktemk/jPlayer-metro-skin/master/skin/metro-fire/jplayer.metro-fire.css.map
 
 # FontAwesome for player
 wget -O st/font-awesome.min.css https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/css/font-awesome.min.css
