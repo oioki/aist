@@ -50,7 +50,7 @@ function play(href)
 </thead>
 <tbody>
 {foreach from=$calls item=item}
-<tr class='{$item.class}'>{if $role eq 'supervisor' or $role eq 'admin'}<td>{if $item.cause eq 'Разговор'}<a href="{$item.downloadlink}" download><img src='st/download.png'/></a><a href="{$item.playlink}" onclick="return play(this.href);"><img src='st/play.png'/></a>{/if}</td>{/if}<td>{$item.dateTimeOrigination}</td><td>{$item.direction}{if $item.img}&nbsp;<img src='st/{$item.img}.png'/>{/if}</td><td>{$item.callingPartyNumber}{if $item.srcname} - {$item.srcname}{/if}</td><td>{$item.finalCalledPartyNumber}{if $item.marker}<font color="{$item.marker}">*</font>{/if}{if $item.dstname} - {$item.dstname}{/if}</td><td>{$item.dateTimeConnect}</td><td>{$item.dateTimeDisconnect}</td><td>{$item.ringtime}</td><td>{$item.duration}</td><td>{$item.cause}</td></tr>
+<tr class='{$item.class}'>{if $role eq 'supervisor' or $role eq 'admin'}<td>{if $item.cause eq 'Разговор'}<a href="{$item.downloadlink}" download={$item.downloadlabel}><img src='st/download.png'/></a><a href="{$item.playlink}" onclick="return play(this.href);"><img src='st/play.png'/></a>{/if}</td>{/if}<td>{$item.dateTimeOrigination}</td><td>{$item.direction}{if $item.img}&nbsp;<img src='st/{$item.img}.png'/>{/if}</td><td>{$item.callingPartyNumber}{if $item.srcname} - {$item.srcname}{/if}</td><td>{$item.finalCalledPartyNumber}{if $item.marker}<font color="{$item.marker}">*</font>{/if}{if $item.dstname} - {$item.dstname}{/if}</td><td>{$item.dateTimeConnect}</td><td>{$item.dateTimeDisconnect}</td><td>{$item.ringtime}</td><td>{$item.duration}</td><td>{$item.cause}</td></tr>
 {/foreach}
 </tbody>
 </table>
